@@ -1,0 +1,8 @@
+- file:
+    state: "directory"
+    path: "{{ item }}"
+  with_items:
+    - "{{ data_path }}/cassandra"
+    - "{{ data_path }}/cassandra/data"
+    - "{{ data_path }}/cassandra/saved_caches"
+    - "{{ data_path }}/cassandra/commitlog"

@@ -529,7 +529,7 @@ listen_interface: eth0
 
 # Address to broadcast to other Cassandra nodes
 # Leaving this blank will set it to the same value as listen_address
-broadcast_address: {{ ansible_eth0.ipv4.address }}
+#broadcast_address: {{ ansible_eth0.ipv4.address }}
 
 # When using multiple physical network interfaces, set this
 # to true to listen on broadcast_address in addition to
@@ -537,7 +537,7 @@ broadcast_address: {{ ansible_eth0.ipv4.address }}
 # interfaces.
 # Ignore this property if the network configuration automatically
 # routes  between the public and private networks such as EC2.
-listen_on_broadcast_address: true
+#listen_on_broadcast_address: true
 
 # Internode authentication backend, implementing IInternodeAuthenticator;
 # used to allow/disallow connections from peer nodes.
@@ -578,7 +578,7 @@ native_transport_port: 9042
 # native_transport_max_concurrent_connections_per_ip: -1
 
 # Whether to start the thrift rpc server.
-start_rpc: false
+start_rpc: true
 
 # The address or interface to bind the Thrift RPC service and native transport
 # server to.
